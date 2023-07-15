@@ -9,6 +9,9 @@ local Weapons = false
 local WeaponsFunc
 
 
+local HugeHeadFunc
+local HugeHead
+
 AutoPickupFunc = function()
     for _,v in pairs(workspace:GetDescendants()) do
         if v:IsA("TouchTransmitter") and v.Parent.Name == "Gungiver" or v.Parent.Name == "GunGiver" or v.Parent.Name == "Giver" or v.Parent.Name == "Give" or v.Parent.Name == "Handle" and v.Parent.Parent.Name == "C4Giver"  then
@@ -51,13 +54,39 @@ end
 end
 
     
+HugeHeadFunc = function()
+    while HugeHead do task.wait()
+        for i,v in next, game:GetService('Players'):GetPlayers() do
+        if v.Name ~= game:GetService('Players').LocalPlayer.Name then
+        pcall(function()
+        v.Character.HumanoidRootPart.Size = Vector3.new(70,70,70)
+        v.Character.HumanoidRootPart.Transparency = 0.9
+        v.Character.HumanoidRootPart.BrickColor = BrickColor.new("Light Royal blue")
+        v.Character.HumanoidRootPart.Material = "Neon"
+        v.Character.HumanoidRootPart.CanCollide = false 
+        end)
+        end
+        end
+        end
+        for i,v in next, game:GetService('Players'):GetPlayers() do
+            if v.Name ~= game:GetService('Players').LocalPlayer.Name then
+            pcall(function()
+            v.Character.HumanoidRootPart.Size = Vector3.new(1,1,1)
+            v.Character.HumanoidRootPart.Transparency = 1
+            v.Character.HumanoidRootPart.BrickColor = BrickColor.new("Light Royal blue")
+            v.Character.HumanoidRootPart.Material = "Neon"
+            v.Character.HumanoidRootPart.CanCollide = false 
+            end)
+            end
+            end
+end
 
 --// LIB \\--
 local Material = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kinlei/MaterialLua/master/Module.lua"))()
 
 local X = Material.Load({
 	Title = "2PGFT | Lofi™",
-	Style = 3,
+	Style = 4,
 	SizeX = 400,
 	SizeY = 400,
 	Theme = "Dark",
@@ -121,6 +150,7 @@ local Hitbox2Button = main.Button({
 })
 
 
+
 local AutoGetToolsButton = main.Button({
     Text = "Auto Get All Tools",
     Callback = function()
@@ -129,6 +159,21 @@ local AutoGetToolsButton = main.Button({
         end)
     end,
 })
+
+
+local hugehead = main.Toggle({
+    Text = "Hitbox Extender",
+    Callback = function(v)
+        HugeHead = v
+        
+        if HugeHead then
+            pcall(function()
+                HugeHeadFunc()
+            end)
+        end
+    end
+})
+
 
 
 
