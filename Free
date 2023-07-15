@@ -21,18 +21,18 @@ end
 
 HitboxFunc = function()
        if game.Players.LocalPlayer.Character:FindFirstChild("Darkheart") then
-        game.Players.LocalPlayer.Character:FindFirstChild("Darkheart").Handle.Size = Vector3.new(120,120,120) 
+        game.Players.LocalPlayer.Character:FindFirstChild("Darkheart").Handle.Size = Vector3.new(90,90,90) 
        elseif game.Players.LocalPlayer.Backpack:FindFirstChild("Darkheart") then
-        game.Players.LocalPlayer.Backpack:FindFirstChild("Darkheart").Handle.Size = Vector3.new(120,120,120) 
+        game.Players.LocalPlayer.Backpack:FindFirstChild("Darkheart").Handle.Size = Vector3.new(90,90,90) 
     end
 end
 
 
 Hitbox2Func = function()
     if game.Players.LocalPlayer.Character:FindFirstChild("Illumina") then
-     game.Players.LocalPlayer.Character:FindFirstChild("Illumina").Handle.Size = Vector3.new(120,120,120) 
+     game.Players.LocalPlayer.Character:FindFirstChild("Illumina").Handle.Size = Vector3.new(90,90,90) 
     elseif game.Players.LocalPlayer.Backpack:FindFirstChild("Illumina") then
-     game.Players.LocalPlayer.Backpack:FindFirstChild("Illumina").Handle.Size = Vector3.new(120,120,120) 
+     game.Players.LocalPlayer.Backpack:FindFirstChild("Illumina").Handle.Size = Vector3.new(90,90,90) 
  end
 end
 
