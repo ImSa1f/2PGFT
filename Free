@@ -40,8 +40,8 @@ end
 WeaponsFunc = function()
 while Weapons do task.wait(0.7)
 for i,v in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
-    if v.Name == "Range" or v.Name == "Damage" or v.Name == "CurrentAmmo" or v.Name == "MaxAmmo" then
-        v.Value = 1000
+    if v.Name == "Range" or v.Name == "Damage"  then
+        v.Value = 10000000
     elseif v.Name == "ReloadTime" or v.Name =="Spread" or v.Name =="FireRate" then
         v.Value = 0 
     end
