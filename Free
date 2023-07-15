@@ -86,8 +86,8 @@ local Material = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kinl
 
 local X = Material.Load({
 	Title = "2PGFT | Lofi™",
-	Style = 3,
-	SizeX = 210,
+	Style = 4,
+	SizeX = 300,
 	SizeY = 250,
 	Theme = "Dark",
 	ColorOverrides = {
